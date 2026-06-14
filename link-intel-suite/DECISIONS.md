@@ -30,3 +30,6 @@ Format:
 -`[13:55]` Rejected simple home-page reassignment approach -> improves only the "(home)" cluster and does not fully satisfy the rulebook requirement that clustering be based on titles, headings, and body text.
 -`[14:05]` Evaluated keyword-seed clustering proposal -> stronger than URL-path clustering because it uses content-derived keywords and is robust to flat URL structures. Deferred implementation pending review of cluster stability and false-positive risks.
 -`[14:15]` Selected graph-based connected-component clustering over URL-path and seed-based approaches -> deterministic, content-driven, order-invariant, and more robust to hidden exports with flat URL structures.
+-`[14:35]` Replaced URL-path clustering with graph-based connected-component clustering using filtered keyword overlap and adaptive Jaccard thresholds. Reduced cluster count from 47 to 13 while preserving report generation.
+-`[14:50]` Reviewed link_candidates() against rulebook section E -> current implementation ranks only by relatedness and ignores orphan, under-linked, and scattered-cluster priorities required by the specification.
+-`[15:05]` Designed strategic recommendation ranking to prioritize orphan, under-linked, and scattered-cluster targets rather than sorting solely by relatedness.

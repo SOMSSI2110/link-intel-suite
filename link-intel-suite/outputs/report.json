@@ -8,8 +8,8 @@
     "orphan_pages": 0,
     "broken_internal_links": 73,
     "generic_anchors": 157,
-    "topical_clusters": 33,
-    "link_recommendations": 30
+    "topical_clusters": 13,
+    "link_recommendations": 28
   },
   "link_graph": {
     "internal_links": 12420,
@@ -18011,17 +18011,25 @@
   },
   "topical_clusters": [
     {
-      "key": "blog",
+      "key": "(home)",
       "name": null,
-      "size": 106,
+      "size": 189,
       "pages": [
+        "https://nmgtechnologies.com",
+        "https://nmgtechnologies.com/advanced-seo-case-studies",
+        "https://nmgtechnologies.com/agentic-ai",
+        "https://nmgtechnologies.com/ai-driven-business-transformation-consulting",
+        "https://nmgtechnologies.com/ai-driven-enterprise-software-development",
+        "https://nmgtechnologies.com/ai-enhanced-web-mobile-application-development",
+        "https://nmgtechnologies.com/ai-machine-learning-solutions",
+        "https://nmgtechnologies.com/ai-powered-business-process-transformation",
+        "https://nmgtechnologies.com/ai-strategy-implementation-consulting",
         "https://nmgtechnologies.com/blog",
         "https://nmgtechnologies.com/blog/10-best-html-css-frameworks-for-2015",
         "https://nmgtechnologies.com/blog/10-ways-to-find-the-best-outsourcing-team",
         "https://nmgtechnologies.com/blog/5-website-design-trends-invest-2017",
         "https://nmgtechnologies.com/blog/50-mobile-app-kpis",
         "https://nmgtechnologies.com/blog/8-reasons-to-choose-android-application-development-over-ios",
-        "https://nmgtechnologies.com/blog/ada-compliance-website-checklist",
         "https://nmgtechnologies.com/blog/advantages-building-app-dot-net-technology",
         "https://nmgtechnologies.com/blog/advantages-of-asp-net-core",
         "https://nmgtechnologies.com/blog/app-store-optimization-tips",
@@ -18044,7 +18052,6 @@
         "https://nmgtechnologies.com/blog/choose-the-perfect-e-commerce-platform",
         "https://nmgtechnologies.com/blog/consulting-can-save-building-bad-tech",
         "https://nmgtechnologies.com/blog/core-php-vs-php-framework",
-        "https://nmgtechnologies.com/blog/covid-19-resources",
         "https://nmgtechnologies.com/blog/custom-web-applications",
         "https://nmgtechnologies.com/blog/digital-marketing-guide",
         "https://nmgtechnologies.com/blog/ecommerce",
@@ -18056,14 +18063,12 @@
         "https://nmgtechnologies.com/blog/how-to-build-an-app-like-uber",
         "https://nmgtechnologies.com/blog/how-to-increase-your-website-traffic",
         "https://nmgtechnologies.com/blog/industry-roundup-december-2013",
-        "https://nmgtechnologies.com/blog/least-expensive-way-increase-sales-e-commerce-store",
         "https://nmgtechnologies.com/blog/marketing-tips-for-smbs",
         "https://nmgtechnologies.com/blog/mobile-app-analytics-tools",
         "https://nmgtechnologies.com/blog/must-have-pages-on-your-ecommerce-site",
         "https://nmgtechnologies.com/blog/new-media-gurus-webinar-and-workshop-on-digital-marketing-strategies-for-smbs-startups",
         "https://nmgtechnologies.com/blog/nmg-recognized-top-performing-mobile-app-development-company-goodfirms",
         "https://nmgtechnologies.com/blog/nmg-technologies-made-list-top-mobile-app-development-companies-goodfirms",
-        "https://nmgtechnologies.com/blog/nmg-technologies-nigeria-meet",
         "https://nmgtechnologies.com/blog/nmg-technologies-participated-in-softwave-2023-the-republic-of-korea-software-exhibition",
         "https://nmgtechnologies.com/blog/nmg-technologies-to-participate-in-leap-2023-tech-conference-in-riyadh-saudi-arabia",
         "https://nmgtechnologies.com/blog/nmg-technologies-to-participate-in-mobile-word-capital-barcelona-the-worlds-largest-and-most-influential-connectivity-event",
@@ -18086,7 +18091,6 @@
         "https://nmgtechnologies.com/blog/requirement-gathering-solve-biggest-problems-consulting",
         "https://nmgtechnologies.com/blog/requirement-gathering-the-most-important-step-to-begin-your-start-up-journey",
         "https://nmgtechnologies.com/blog/sempo-hangouts-session-user-experience",
-        "https://nmgtechnologies.com/blog/startup-india-event-2016-key-highlights",
         "https://nmgtechnologies.com/blog/stay-ahead-of-the-game-with-koora-break-your-ultimate-companion-for-football-updates",
         "https://nmgtechnologies.com/blog/steps-to-create-engaging-mobile-app-content",
         "https://nmgtechnologies.com/blog/tag/design",
@@ -18120,70 +18124,32 @@
         "https://nmgtechnologies.com/blog/why-mobile-app-fails",
         "https://nmgtechnologies.com/blog/wireframes-mobile-app-development",
         "https://nmgtechnologies.com/blog/wordpress-website-perfect-solution-small-business",
-        "https://nmgtechnologies.com/blog/working-from-home-during-the-coronavirus-lockdown"
-      ],
-      "hub_page": "https://nmgtechnologies.com/blog",
-      "hub_inlinks": 218,
-      "authority": "scattered",
-      "keywords": [
-        "development",
-        "software",
-        "time",
-        "web",
-        "mobile",
-        "design",
-        "estimated",
-        "reading"
-      ]
-    },
-    {
-      "key": "success-stories",
-      "name": null,
-      "size": 23,
-      "pages": [
-        "https://nmgtechnologies.com/success-stories",
-        "https://nmgtechnologies.com/success-stories/acs",
-        "https://nmgtechnologies.com/success-stories/advanced-care",
-        "https://nmgtechnologies.com/success-stories/atlys-case-study",
-        "https://nmgtechnologies.com/success-stories/atmosrx-case-study",
-        "https://nmgtechnologies.com/success-stories/competiscan",
-        "https://nmgtechnologies.com/success-stories/compound-banc",
-        "https://nmgtechnologies.com/success-stories/fusion-firearms-case-study",
-        "https://nmgtechnologies.com/success-stories/hugo-by-rgp",
-        "https://nmgtechnologies.com/success-stories/international-insurance",
-        "https://nmgtechnologies.com/success-stories/jobgraze",
-        "https://nmgtechnologies.com/success-stories/little-academy-nursery",
-        "https://nmgtechnologies.com/success-stories/nikon-case-study",
-        "https://nmgtechnologies.com/success-stories/omtut",
-        "https://nmgtechnologies.com/success-stories/reputation-rhino-case-study",
-        "https://nmgtechnologies.com/success-stories/sforzo-dillingham-case-study",
-        "https://nmgtechnologies.com/success-stories/south-county",
-        "https://nmgtechnologies.com/success-stories/sunshine-case-study",
-        "https://nmgtechnologies.com/success-stories/trainup",
-        "https://nmgtechnologies.com/success-stories/unique-schools",
-        "https://nmgtechnologies.com/success-stories/wealth-concert",
-        "https://nmgtechnologies.com/success-stories/wolomi",
-        "https://nmgtechnologies.com/success-stories/yew"
-      ],
-      "hub_page": "https://nmgtechnologies.com/success-stories",
-      "hub_inlinks": 218,
-      "authority": "hub",
-      "keywords": [
-        "platform",
-        "content",
-        "website",
-        "traffic",
-        "seo",
-        "search",
-        "nmg",
-        "project"
-      ]
-    },
-    {
-      "key": "services",
-      "name": null,
-      "size": 21,
-      "pages": [
+        "https://nmgtechnologies.com/blog/working-from-home-during-the-coronavirus-lockdown",
+        "https://nmgtechnologies.com/clients/case-studies",
+        "https://nmgtechnologies.com/company/about-us",
+        "https://nmgtechnologies.com/company/careers",
+        "https://nmgtechnologies.com/company/leadership",
+        "https://nmgtechnologies.com/company/outsourcing",
+        "https://nmgtechnologies.com/company/process",
+        "https://nmgtechnologies.com/contact-us",
+        "https://nmgtechnologies.com/download-appdevelopmentcost-ebook",
+        "https://nmgtechnologies.com/download-content-editorial-calendar",
+        "https://nmgtechnologies.com/download-developmental-checklist",
+        "https://nmgtechnologies.com/download-outsourcingrules-ebook",
+        "https://nmgtechnologies.com/ecommerce-checklist",
+        "https://nmgtechnologies.com/get-custom-pricing",
+        "https://nmgtechnologies.com/industry/fintech",
+        "https://nmgtechnologies.com/industry/healthcare",
+        "https://nmgtechnologies.com/industry/marketresearch",
+        "https://nmgtechnologies.com/industry/staffing",
+        "https://nmgtechnologies.com/industry/travel",
+        "https://nmgtechnologies.com/mobile-development-checklist",
+        "https://nmgtechnologies.com/privacy-policy",
+        "https://nmgtechnologies.com/resources/faq",
+        "https://nmgtechnologies.com/resources/library",
+        "https://nmgtechnologies.com/resources/library/hire-web-developers-guide",
+        "https://nmgtechnologies.com/resources/library/mobile-app-development-guide",
+        "https://nmgtechnologies.com/resources/library/python-development-guide",
         "https://nmgtechnologies.com/services/crm-development",
         "https://nmgtechnologies.com/services/custom-software-development",
         "https://nmgtechnologies.com/services/custom-software-development/aspnet-development",
@@ -18204,188 +18170,53 @@
         "https://nmgtechnologies.com/services/user-interface-design/mobile-design",
         "https://nmgtechnologies.com/services/user-interface-design/mobile-versions-v1",
         "https://nmgtechnologies.com/services/user-interface-design/web-design",
-        "https://nmgtechnologies.com/services/web-development"
-      ],
-      "hub_page": "https://nmgtechnologies.com/services/custom-software-development",
-      "hub_inlinks": 218,
-      "authority": "scattered",
-      "keywords": [
-        "services",
-        "development",
-        "technologies",
-        "nmg",
-        "solutions",
-        "business",
-        "custom",
-        "web"
-      ]
-    },
-    {
-      "key": "company",
-      "name": null,
-      "size": 6,
-      "pages": [
-        "https://nmgtechnologies.com/company/about-us",
-        "https://nmgtechnologies.com/company/careers",
-        "https://nmgtechnologies.com/company/leadership",
-        "https://nmgtechnologies.com/company/outsourcing",
-        "https://nmgtechnologies.com/company/process",
-        "https://nmgtechnologies.com/company/promise"
-      ],
-      "hub_page": "https://nmgtechnologies.com/company/about-us",
-      "hub_inlinks": 218,
-      "authority": "scattered",
-      "keywords": [
-        "development",
-        "software",
-        "nmg",
-        "team",
-        "digital",
-        "solutions",
-        "marketing",
-        "design"
-      ]
-    },
-    {
-      "key": "solution",
-      "name": null,
-      "size": 6,
-      "pages": [
+        "https://nmgtechnologies.com/services/web-development",
+        "https://nmgtechnologies.com/sitemap",
         "https://nmgtechnologies.com/solution/artificial-intelligence",
         "https://nmgtechnologies.com/solution/augmented-reality",
         "https://nmgtechnologies.com/solution/blockchain",
         "https://nmgtechnologies.com/solution/cloud-apps",
         "https://nmgtechnologies.com/solution/fintech",
-        "https://nmgtechnologies.com/solution/portals"
-      ],
-      "hub_page": "https://nmgtechnologies.com/solution/artificial-intelligence",
-      "hub_inlinks": 218,
-      "authority": "scattered",
-      "keywords": [
-        "development",
-        "services",
-        "solutions",
-        "applications",
-        "business",
-        "secure",
-        "web",
-        "data"
-      ]
-    },
-    {
-      "key": "resources",
-      "name": null,
-      "size": 5,
-      "pages": [
-        "https://nmgtechnologies.com/resources/faq",
-        "https://nmgtechnologies.com/resources/library",
-        "https://nmgtechnologies.com/resources/library/hire-web-developers-guide",
-        "https://nmgtechnologies.com/resources/library/mobile-app-development-guide",
-        "https://nmgtechnologies.com/resources/library/python-development-guide"
-      ],
-      "hub_page": "https://nmgtechnologies.com/resources/faq",
-      "hub_inlinks": 218,
-      "authority": "scattered",
-      "keywords": [
-        "development",
-        "app",
-        "chapter",
-        "what",
-        "mobile",
-        "how",
-        "business",
-        "nmg"
-      ]
-    },
-    {
-      "key": "industry",
-      "name": null,
-      "size": 5,
-      "pages": [
-        "https://nmgtechnologies.com/industry/fintech",
-        "https://nmgtechnologies.com/industry/healthcare",
-        "https://nmgtechnologies.com/industry/marketresearch",
-        "https://nmgtechnologies.com/industry/staffing",
-        "https://nmgtechnologies.com/industry/travel"
-      ],
-      "hub_page": "https://nmgtechnologies.com/industry/fintech",
-      "hub_inlinks": 213,
-      "authority": "scattered",
-      "keywords": [
-        "solutions",
-        "nmg",
-        "management",
-        "software",
-        "secure",
-        "services",
-        "data",
-        "technologies"
-      ]
-    },
-    {
-      "key": "work",
-      "name": null,
-      "size": 4,
-      "pages": [
+        "https://nmgtechnologies.com/solution/portals",
+        "https://nmgtechnologies.com/success-stories",
+        "https://nmgtechnologies.com/success-stories/acs",
+        "https://nmgtechnologies.com/success-stories/advanced-care",
+        "https://nmgtechnologies.com/success-stories/atlys-case-study",
+        "https://nmgtechnologies.com/success-stories/atmosrx-case-study",
+        "https://nmgtechnologies.com/success-stories/competiscan",
+        "https://nmgtechnologies.com/success-stories/compound-banc",
+        "https://nmgtechnologies.com/success-stories/fusion-firearms-case-study",
+        "https://nmgtechnologies.com/success-stories/hugo-by-rgp",
+        "https://nmgtechnologies.com/success-stories/international-insurance",
+        "https://nmgtechnologies.com/success-stories/little-academy-nursery",
+        "https://nmgtechnologies.com/success-stories/nikon-case-study",
+        "https://nmgtechnologies.com/success-stories/omtut",
+        "https://nmgtechnologies.com/success-stories/reputation-rhino-case-study",
+        "https://nmgtechnologies.com/success-stories/sforzo-dillingham-case-study",
+        "https://nmgtechnologies.com/success-stories/south-county",
+        "https://nmgtechnologies.com/success-stories/sunshine-case-study",
+        "https://nmgtechnologies.com/success-stories/trainup",
+        "https://nmgtechnologies.com/success-stories/wealth-concert",
+        "https://nmgtechnologies.com/success-stories/wolomi",
+        "https://nmgtechnologies.com/success-stories/yew",
+        "https://nmgtechnologies.com/wordpress-development",
         "https://nmgtechnologies.com/work/advanced-seo",
         "https://nmgtechnologies.com/work/ecommerce",
         "https://nmgtechnologies.com/work/mobile",
         "https://nmgtechnologies.com/work/web"
       ],
-      "hub_page": "https://nmgtechnologies.com/work/ecommerce",
-      "hub_inlinks": 76,
-      "authority": "scattered",
-      "keywords": [
-        "nmg",
-        "technologies",
-        "team",
-        "business",
-        "responsive",
-        "provided",
-        "web",
-        "project"
-      ]
-    },
-    {
-      "key": "(home)",
-      "name": null,
-      "size": 1,
-      "pages": [
-        "https://nmgtechnologies.com"
-      ],
       "hub_page": "https://nmgtechnologies.com",
       "hub_inlinks": 218,
       "authority": "scattered",
       "keywords": [
-        "nmg",
-        "read",
-        "ai-driven",
-        "solutions",
-        "business",
-        "inc",
-        "software",
-        "development"
-      ]
-    },
-    {
-      "key": "wordpress-development",
-      "name": null,
-      "size": 1,
-      "pages": [
-        "https://nmgtechnologies.com/wordpress-development"
-      ],
-      "hub_page": "https://nmgtechnologies.com/wordpress-development",
-      "hub_inlinks": 213,
-      "authority": "scattered",
-      "keywords": [
-        "wordpress",
         "development",
-        "custom",
+        "nmg",
         "web",
-        "services",
-        "solutions",
-        "websites",
-        "company"
+        "software",
+        "business",
+        "mobile",
+        "design",
+        "technologies"
       ]
     },
     {
@@ -18410,24 +18241,24 @@
       ]
     },
     {
-      "key": "ai-powered-business-process-transformation",
+      "key": "blog",
       "name": null,
       "size": 1,
       "pages": [
-        "https://nmgtechnologies.com/ai-powered-business-process-transformation"
+        "https://nmgtechnologies.com/blog/covid-19-resources"
       ],
-      "hub_page": "https://nmgtechnologies.com/ai-powered-business-process-transformation",
-      "hub_inlinks": 2,
+      "hub_page": "https://nmgtechnologies.com/blog/covid-19-resources",
+      "hub_inlinks": 5,
       "authority": "scattered",
       "keywords": [
-        "workflows",
-        "automation",
+        "coronavirus",
+        "google",
+        "businesses",
+        "platform",
+        "small",
+        "resources",
         "business",
-        "process",
-        "compliance",
-        "across",
-        "ai-powered",
-        "operational"
+        "facebook"
       ]
     },
     {
@@ -18452,24 +18283,24 @@
       ]
     },
     {
-      "key": "ai-driven-business-transformation-consulting",
+      "key": "company",
       "name": null,
       "size": 1,
       "pages": [
-        "https://nmgtechnologies.com/ai-driven-business-transformation-consulting"
+        "https://nmgtechnologies.com/company/promise"
       ],
-      "hub_page": "https://nmgtechnologies.com/ai-driven-business-transformation-consulting",
-      "hub_inlinks": 2,
+      "hub_page": "https://nmgtechnologies.com/company/promise",
+      "hub_inlinks": 218,
       "authority": "scattered",
       "keywords": [
+        "solutions",
+        "nmg",
         "business",
-        "transformation",
-        "ai-driven",
-        "customer",
-        "operations",
-        "efficiency",
-        "consulting",
-        "models"
+        "promise",
+        "deliver",
+        "budget",
+        "part",
+        "development"
       ]
     },
     {
@@ -18515,360 +18346,129 @@
       ]
     },
     {
-      "key": "ai-strategy-implementation-consulting",
+      "key": "success-stories",
       "name": null,
       "size": 1,
       "pages": [
-        "https://nmgtechnologies.com/ai-strategy-implementation-consulting"
+        "https://nmgtechnologies.com/success-stories/unique-schools"
       ],
-      "hub_page": "https://nmgtechnologies.com/ai-strategy-implementation-consulting",
+      "hub_page": "https://nmgtechnologies.com/success-stories/unique-schools",
       "hub_inlinks": 2,
       "authority": "scattered",
       "keywords": [
-        "consulting",
-        "strategy",
-        "business",
-        "roadmap",
-        "across",
-        "adoption",
-        "operations",
-        "systems"
+        "school",
+        "schools",
+        "unique",
+        "educational",
+        "events",
+        "community",
+        "tailored",
+        "institutions"
       ]
     },
     {
-      "key": "privacy-policy",
+      "key": "success-stories",
       "name": null,
       "size": 1,
       "pages": [
-        "https://nmgtechnologies.com/privacy-policy"
+        "https://nmgtechnologies.com/success-stories/jobgraze"
       ],
-      "hub_page": "https://nmgtechnologies.com/privacy-policy",
-      "hub_inlinks": 213,
-      "authority": "scattered",
-      "keywords": [
-        "information",
-        "nmg",
-        "website",
-        "personal",
-        "privacy",
-        "data",
-        "site",
-        "user"
-      ]
-    },
-    {
-      "key": "agentic-ai",
-      "name": null,
-      "size": 1,
-      "pages": [
-        "https://nmgtechnologies.com/agentic-ai"
-      ],
-      "hub_page": "https://nmgtechnologies.com/agentic-ai",
-      "hub_inlinks": 213,
-      "authority": "scattered",
-      "keywords": [
-        "agentic",
-        "agents",
-        "business",
-        "real",
-        "automation",
-        "autonomy",
-        "risks",
-        "beyond"
-      ]
-    },
-    {
-      "key": "contact-us",
-      "name": null,
-      "size": 1,
-      "pages": [
-        "https://nmgtechnologies.com/contact-us"
-      ],
-      "hub_page": "https://nmgtechnologies.com/contact-us",
-      "hub_inlinks": 218,
-      "authority": "scattered",
-      "keywords": [
-        "let",
-        "together",
-        "nmgtechnologies",
-        "com",
-        "build",
-        "future",
-        "contact",
-        "nmg"
-      ]
-    },
-    {
-      "key": "ai-enhanced-web-mobile-application-development",
-      "name": null,
-      "size": 1,
-      "pages": [
-        "https://nmgtechnologies.com/ai-enhanced-web-mobile-application-development"
-      ],
-      "hub_page": "https://nmgtechnologies.com/ai-enhanced-web-mobile-application-development",
-      "hub_inlinks": 2,
-      "authority": "scattered",
-      "keywords": [
-        "apps",
-        "development",
-        "web",
-        "predictive",
-        "adaptive",
-        "experiences",
-        "mobile",
-        "engagement"
-      ]
-    },
-    {
-      "key": "ai-driven-enterprise-software-development",
-      "name": null,
-      "size": 1,
-      "pages": [
-        "https://nmgtechnologies.com/ai-driven-enterprise-software-development"
-      ],
-      "hub_page": "https://nmgtechnologies.com/ai-driven-enterprise-software-development",
-      "hub_inlinks": 2,
-      "authority": "scattered",
-      "keywords": [
-        "enterprise",
-        "solutions",
-        "software",
-        "ai-driven",
-        "business",
-        "efficiency",
-        "development",
-        "systems"
-      ]
-    },
-    {
-      "key": "ai-machine-learning-solutions",
-      "name": null,
-      "size": 1,
-      "pages": [
-        "https://nmgtechnologies.com/ai-machine-learning-solutions"
-      ],
-      "hub_page": "https://nmgtechnologies.com/ai-machine-learning-solutions",
-      "hub_inlinks": 2,
-      "authority": "scattered",
-      "keywords": [
-        "learning",
-        "data",
-        "machine",
-        "solutions",
-        "models",
-        "business",
-        "intelligence",
-        "customer"
-      ]
-    },
-    {
-      "key": "get-custom-pricing",
-      "name": null,
-      "size": 1,
-      "pages": [
-        "https://nmgtechnologies.com/get-custom-pricing"
-      ],
-      "hub_page": "https://nmgtechnologies.com/get-custom-pricing",
-      "hub_inlinks": 213,
-      "authority": "scattered",
-      "keywords": [
-        "nmg",
-        "development",
-        "share",
-        "project",
-        "requirements",
-        "personalized",
-        "estimates",
-        "tech"
-      ]
-    },
-    {
-      "key": "sitemap",
-      "name": null,
-      "size": 1,
-      "pages": [
-        "https://nmgtechnologies.com/sitemap"
-      ],
-      "hub_page": "https://nmgtechnologies.com/sitemap",
-      "hub_inlinks": 139,
-      "authority": "scattered",
-      "keywords": [
-        "development",
-        "sitemap",
-        "mobile",
-        "app",
-        "design",
-        "nmg",
-        "ecommerce",
-        "web"
-      ]
-    },
-    {
-      "key": "download-content-editorial-calendar",
-      "name": null,
-      "size": 1,
-      "pages": [
-        "https://nmgtechnologies.com/download-content-editorial-calendar"
-      ],
-      "hub_page": "https://nmgtechnologies.com/download-content-editorial-calendar",
-      "hub_inlinks": 2,
-      "authority": "scattered",
-      "keywords": [
-        "nmg",
-        "platform",
-        "content",
-        "app",
-        "free",
-        "calendar",
-        "fitness",
-        "what"
-      ]
-    },
-    {
-      "key": "download-outsourcingrules-ebook",
-      "name": null,
-      "size": 1,
-      "pages": [
-        "https://nmgtechnologies.com/download-outsourcingrules-ebook"
-      ],
-      "hub_page": "https://nmgtechnologies.com/download-outsourcingrules-ebook",
-      "hub_inlinks": 2,
-      "authority": "scattered",
-      "keywords": [
-        "nmg",
-        "platform",
-        "app",
-        "outsourcing",
-        "fitness",
-        "technologies",
-        "free",
-        "equipment"
-      ]
-    },
-    {
-      "key": "download-appdevelopmentcost-ebook",
-      "name": null,
-      "size": 1,
-      "pages": [
-        "https://nmgtechnologies.com/download-appdevelopmentcost-ebook"
-      ],
-      "hub_page": "https://nmgtechnologies.com/download-appdevelopmentcost-ebook",
-      "hub_inlinks": 2,
-      "authority": "scattered",
-      "keywords": [
-        "app",
-        "nmg",
-        "platform",
-        "cost",
-        "development",
-        "fitness",
-        "technologies",
-        "help"
-      ]
-    },
-    {
-      "key": "download-developmental-checklist",
-      "name": null,
-      "size": 1,
-      "pages": [
-        "https://nmgtechnologies.com/download-developmental-checklist"
-      ],
-      "hub_page": "https://nmgtechnologies.com/download-developmental-checklist",
-      "hub_inlinks": 2,
-      "authority": "scattered",
-      "keywords": [
-        "nmg",
-        "app",
-        "development",
-        "platform",
-        "checklist",
-        "fitness",
-        "time",
-        "need"
-      ]
-    },
-    {
-      "key": "mobile-development-checklist",
-      "name": null,
-      "size": 1,
-      "pages": [
-        "https://nmgtechnologies.com/mobile-development-checklist"
-      ],
-      "hub_page": "https://nmgtechnologies.com/mobile-development-checklist",
+      "hub_page": "https://nmgtechnologies.com/success-stories/jobgraze",
       "hub_inlinks": 3,
       "authority": "scattered",
       "keywords": [
-        "app",
-        "nmg",
+        "healthcare",
+        "jobgraze",
+        "professionals",
+        "employers",
+        "recruitment",
+        "job",
         "platform",
-        "mobile",
-        "development",
-        "free",
-        "fitness",
-        "equipment"
+        "efficient"
       ]
     },
     {
-      "key": "clients",
+      "key": "blog",
       "name": null,
       "size": 1,
       "pages": [
-        "https://nmgtechnologies.com/clients/case-studies"
+        "https://nmgtechnologies.com/blog/startup-india-event-2016-key-highlights"
       ],
-      "hub_page": "https://nmgtechnologies.com/clients/case-studies",
-      "hub_inlinks": 2,
+      "hub_page": "https://nmgtechnologies.com/blog/startup-india-event-2016-key-highlights",
+      "hub_inlinks": 5,
       "authority": "scattered",
       "keywords": [
-        "inc",
-        "seo",
-        "nmg",
-        "success",
-        "stories",
-        "content",
-        "case",
-        "studies"
+        "startup",
+        "event",
+        "india",
+        "startups",
+        "government",
+        "minister",
+        "prime",
+        "innovation"
       ]
     },
     {
-      "key": "ecommerce-checklist",
+      "key": "blog",
       "name": null,
       "size": 1,
       "pages": [
-        "https://nmgtechnologies.com/ecommerce-checklist"
+        "https://nmgtechnologies.com/blog/least-expensive-way-increase-sales-e-commerce-store"
       ],
-      "hub_page": "https://nmgtechnologies.com/ecommerce-checklist",
-      "hub_inlinks": 2,
+      "hub_page": "https://nmgtechnologies.com/blog/least-expensive-way-increase-sales-e-commerce-store",
+      "hub_inlinks": 7,
       "authority": "scattered",
       "keywords": [
-        "nmg",
-        "platform",
-        "app",
-        "ecommerce",
-        "business",
-        "fitness",
-        "launch",
-        "checklist"
+        "sales",
+        "koala",
+        "great",
+        "product",
+        "e-commerce",
+        "strategy",
+        "marketing",
+        "way"
       ]
     },
     {
-      "key": "advanced-seo-case-studies",
+      "key": "blog",
       "name": null,
       "size": 1,
       "pages": [
-        "https://nmgtechnologies.com/advanced-seo-case-studies"
+        "https://nmgtechnologies.com/blog/ada-compliance-website-checklist"
       ],
-      "hub_page": "https://nmgtechnologies.com/advanced-seo-case-studies",
-      "hub_inlinks": 2,
+      "hub_page": "https://nmgtechnologies.com/blog/ada-compliance-website-checklist",
+      "hub_inlinks": 6,
       "authority": "scattered",
       "keywords": [
-        "seo",
-        "content",
-        "keywords",
-        "top",
-        "case",
-        "ranking",
-        "organic",
-        "traffic"
+        "ada",
+        "compliance",
+        "website",
+        "level",
+        "websites",
+        "accessible",
+        "accessibility",
+        "public"
+      ]
+    },
+    {
+      "key": "blog",
+      "name": null,
+      "size": 1,
+      "pages": [
+        "https://nmgtechnologies.com/blog/nmg-technologies-nigeria-meet"
+      ],
+      "hub_page": "https://nmgtechnologies.com/blog/nmg-technologies-nigeria-meet",
+      "hub_inlinks": 5,
+      "authority": "scattered",
+      "keywords": [
+        "nigeria",
+        "technology",
+        "lagos",
+        "one",
+        "financial",
+        "nigerian",
+        "growing",
+        "economic"
       ]
     }
   ],
@@ -30051,17 +29651,17 @@
     },
     {
       "source": "https://nmgtechnologies.com/services/user-interface-design/web-design",
-      "target": "https://nmgtechnologies.com/blog/10-best-html-css-frameworks-for-2015",
-      "suggested_anchor": null,
-      "relatedness": 0.2,
-      "reason": "shared topics: design, responsive, web, website"
-    },
-    {
-      "source": "https://nmgtechnologies.com/services/user-interface-design/web-design",
       "target": "https://nmgtechnologies.com/services/user-interface-design/mobile-versions-v1",
       "suggested_anchor": null,
       "relatedness": 0.2,
       "reason": "shared topics: design, responsive, web, websites"
+    },
+    {
+      "source": "https://nmgtechnologies.com/services/user-interface-design/web-design",
+      "target": "https://nmgtechnologies.com/blog/10-best-html-css-frameworks-for-2015",
+      "suggested_anchor": null,
+      "relatedness": 0.2,
+      "reason": "shared topics: design, responsive, web, website"
     },
     {
       "source": "https://nmgtechnologies.com/services/user-interface-design/mobile-design",
@@ -30111,25 +29711,11 @@
       "suggested_anchor": null,
       "relatedness": 0.143,
       "reason": "shared topics: across, business, intelligence"
-    },
-    {
-      "source": "https://nmgtechnologies.com/agentic-ai",
-      "target": "https://nmgtechnologies.com/blog/covid-19-resources",
-      "suggested_anchor": null,
-      "relatedness": 0.091,
-      "reason": "shared topics: business, businesses"
-    },
-    {
-      "source": "https://nmgtechnologies.com/agentic-ai",
-      "target": "https://nmgtechnologies.com/ai-strategy-implementation-consulting",
-      "suggested_anchor": null,
-      "relatedness": 0.091,
-      "reason": "shared topics: across, business"
     }
   ],
   "run_meta": {
     "model": "gpt-oss:20b-cloud",
     "model_calls": 0,
-    "duration_sec": 1.0
+    "duration_sec": 0.4
   }
 }

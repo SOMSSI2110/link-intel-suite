@@ -51,3 +51,27 @@ Finding a rulebook-compliant clustering strategy before implementation.
 
 Revised?
 Pending comparison against current URL-path approach.
+4. Prompt:
+Implement graph-based clustering using filtered page keywords, adaptive Jaccard thresholds, and connected components while preserving the report schema.
+
+For:
+Replacing URL-path clustering with content-driven topical clustering.
+
+Revised?
+Yes. Initial design used seed-based clustering but was rejected due to order dependence and cluster fragmentation.
+5. Prompt:
+Open link_candidates() and compare it against rulebook section E. List exactly three weaknesses that prevent high-quality recommendations.
+
+For:
+Identifying rulebook gaps before redesigning recommendation ranking.
+
+Revised?
+No.
+6. Prompt:
+Design a deterministic recommendation scoring system combining relatedness, orphan priority, under-linked priority, and scattered-cluster priority.
+
+For:
+Improving contextual internal-link recommendations to align with rulebook section E.
+
+Revised?
+Pending evaluation of additive versus multiplicative scoring.

@@ -274,39 +274,103 @@ def page_keywords(page, body: str, top=12) -> list[str]:
 
 
 def cluster_pages(pages, page_text, n_keywords=12) -> dict:
-    """Group indexable pages into topical clusters.
+    """Group indexable pages into topical clusters using graph-based Jaccard similarity.
 
-    STARTER heuristic: cluster by first URL path segment (e.g. /success-stories/,
-    /blog/, root services). For each cluster compute a hub candidate = the member
-    with the most internal inlinks. Replace/augment with a real keyword/TF or
-    embedding clustering and let the model NAME each cluster (topic-agent).
+    1. Global Noise Filter: Remove keywords appearing in >30% of indexable pages.
+    2. Adaptive Threshold: Use 1.5x the mean non-zero similarity (min 0.1).
+    3. Connected Components: Group pages via BFS based on filtered similarity.
     """
     idx200 = [p for p in pages if is_html(p) and is_200(p) and indexable(p)]
-    clusters = defaultdict(list)
+    if not idx200:
+        return {"clusters": [], "page_keywords": {}}
+
+    # 1. Keyword Generation
     kw = {}
+    all_kw_counts = Counter()
     for p in idx200:
         u = _norm(p["Address"])
-        path = urlparse(u).path.strip("/")
-        seg = path.split("/")[0] if path else "(home)"
-        clusters[seg].append(u)
-        kw[u] = page_keywords(p, page_text.get(u, ""), n_keywords)
+        kws = page_keywords(p, page_text.get(u, ""), n_keywords)
+        kw[u] = kws
+        all_kw_counts.update(kws)
 
+    # 2. Global Noise Filter (>30% occurrence)
+    threshold_count = len(idx200) * 0.3
+    global_kws = {w for w, c in all_kw_counts.items() if c > threshold_count}
+    f_kw = {u: set(kws) - global_kws for u, kws in kw.items()}
+
+    # 3. Similarity & Adaptive Threshold
+    inv_idx = defaultdict(list)
+    for u, kws in f_kw.items():
+        for w in kws:
+            inv_idx[w].append(u)
+
+    sims = {} # (u, v) -> score
+    non_zero_sims = []
+    urls = list(f_kw.keys())
+
+    for i, u in enumerate(urls):
+        su = f_kw[u]
+        if not su: continue
+        candidates = set()
+        for w in su:
+            candidates.update(inv_idx[w])
+
+        for v in candidates:
+            if v == u: continue
+            sv = f_kw[v]
+            if not sv: continue
+            inter = len(su & sv)
+            if inter == 0: continue
+            score = inter / len(su | sv)
+            pair = tuple(sorted((u, v)))
+            if pair not in sims:
+                sims[pair] = score
+                non_zero_sims.append(score)
+
+    mean_sim = sum(non_zero_sims) / len(non_zero_sims) if non_zero_sims else 0
+    threshold = max(0.1, mean_sim * 1.5)
+
+    # 4. Connected Components (BFS)
+    adj = defaultdict(list)
+    for (u, v), score in sims.items():
+        if score >= threshold:
+            adj[u].append(v)
+            adj[v].append(u)
+
+    visited = set()
+    components = []
+    for u in urls:
+        if u not in visited:
+            comp = []
+            q = [u]
+            visited.add(u)
+            while q:
+                curr = q.pop(0)
+                comp.append(curr)
+                for neighbor in adj[curr]:
+                    if neighbor not in visited:
+                        visited.add(neighbor)
+                        q.append(neighbor)
+            components.append(comp)
+
+    # 5. Cluster Finalization (Schema Preservation)
     out = []
     inl = {_norm(p["Address"]): _int(p.get("Unique Inlinks")) for p in idx200}
-    for seg, members in sorted(clusters.items(), key=lambda x: -len(x[1])):
+
+    for members in components:
         members = sorted(members)
-        hub = max(members, key=lambda u: inl.get(u, 0)) if members else None
+        hub = max(members, key=lambda u: inl.get(u, 0))
         hub_inlinks = inl.get(hub, 0)
         member_inl = sorted((inl.get(m, 0) for m in members), reverse=True)
-        # authority signal: clear hub if the top page has >=2x the 2nd page's inlinks
         clear_hub = bool(len(member_inl) >= 2 and hub_inlinks >= 2 * (member_inl[1] or 1))
-        # cluster keywords = most common across members (placeholder name)
+        path = urlparse(hub).path.strip("/")
+        seg = path.split("/")[0] if path else "(home)"
         ck = Counter()
         for m in members:
             ck.update(kw.get(m, []))
         out.append({
             "key": seg,
-            "name": None,  # TODO: model names this cluster (topic-agent)
+            "name": None,
             "size": len(members),
             "pages": members,
             "hub_page": hub,
@@ -314,7 +378,8 @@ def cluster_pages(pages, page_text, n_keywords=12) -> dict:
             "authority": "hub" if clear_hub else "scattered",
             "keywords": [w for w, _ in ck.most_common(8)],
         })
-    return {"clusters": out, "page_keywords": kw}
+
+    return {"clusters": sorted(out, key=lambda x: -x["size"]), "page_keywords": kw}
 
 
 # --------------------------------------------------------------------------- #
@@ -355,18 +420,25 @@ def relatedness(page_keywords: dict, top_per_page=5) -> dict:
 # --------------------------------------------------------------------------- #
 # 5. CONTEXTUAL LINK RECOMMENDATIONS  (starter: candidates; model writes anchors)
 # --------------------------------------------------------------------------- #
-def link_candidates(graph, relate: dict, pages, max_per_page=5) -> list:
+def link_candidates(graph, relate: dict, pages, clusters=None, max_per_page=5) -> list:
     """For each important page, find topically-related pages it does NOT already
-    link to. The model (linker-agent) turns each candidate into a final
-    recommendation with a suggested anchor.
-
-    STARTER returns the raw candidates (deterministic). It does NOT write anchors -
-    that is the model's job (see agents/linker.md).
+    link to, prioritized by structural urgency.
     """
     idx200 = [p for p in pages if is_html(p) and is_200(p) and indexable(p)]
+    pages_by_url = {_norm(p["Address"]): p for p in idx200}
     inl = {_norm(p["Address"]): _int(p.get("Unique Inlinks")) for p in idx200}
-    # "important" = top pages by inlinks (hubs/money pages). Tune as needed.
+
+    # "important" = top pages by inlinks (hubs/money pages).
     important = sorted(inl, key=lambda u: -inl[u])[:40]
+
+    # Pre-map pages to their cluster authority for O(1) lookup
+    page_to_authority = {}
+    if clusters:
+        for cl in clusters.get("clusters", []):
+            auth = cl.get("authority")
+            for p in cl.get("pages", []):
+                page_to_authority[p] = auth
+
     out = []
     for u in important:
         already = graph["out"].get(u, set())
@@ -375,12 +447,44 @@ def link_candidates(graph, relate: dict, pages, max_per_page=5) -> list:
             v = e["to"]
             if v in already or v == u:
                 continue
-            cands.append({"target": v, "relatedness": e["score"], "shared_topics": e["shared"],
-                          "suggested_anchor": None})  # TODO: model writes the anchor
-            if len(cands) >= max_per_page:
-                break
+
+            rel = e["score"]
+            if rel < 0.1: # Relevance Floor
+                continue
+
+            # Strategic Multiplier
+            v_inlinks = inl.get(v, 0)
+            if v_inlinks == 0:
+                mult, reason = 3.0, "High topical relatedness; target is an orphan page."
+            elif v_inlinks <= 1:
+                mult, reason = 2.0, "High topical relatedness; target is under-linked."
+            elif page_to_authority.get(v) == "scattered":
+                mult, reason = 1.5, "High topical relatedness; target helps resolve a scattered cluster."
+            else:
+                mult, reason = 1.0, "Strong topical relatedness."
+
+            score = rel * mult
+            cands.append({
+                "target": v,
+                "relatedness": rel,
+                "shared_topics": e["shared"],
+                "suggested_anchor": None,
+                "score": score,
+                "reason": reason
+            })
+
+        # Sort by strategic score descending
+        cands.sort(key=lambda x: -x["score"])
+
         if cands:
-            out.append({"source": u, "candidates": cands})
+            # Trim to max_per_page and remove the helper score
+            final_cands = []
+            for c in cands[:max_per_page]:
+                item = {k: v for k, v in c.items() if k != "score"}
+                item["reason"] = c["reason"]
+                final_cands.append(item)
+            out.append({"source": u, "candidates": final_cands})
+
     return out
 
 
@@ -396,7 +500,7 @@ def analyze(export_dir: str) -> dict:
     anchors = anchor_analysis(inlinks)
     clusters = cluster_pages(pages, text)
     relate = relatedness(clusters["page_keywords"])
-    cands = link_candidates(graph, relate, pages)
+    cands = link_candidates(graph, relate, pages, clusters)
     return {
         "pages": pages, "graph": graph, "graph_stats": gstats,
         "anchors": anchors, "clusters": clusters, "relatedness": relate,
