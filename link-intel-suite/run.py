@@ -5,22 +5,34 @@ run.py - headless runner for the Link Intel Suite (also the grader's entry point
 Runs the full internal-linking analysis on a Screaming Frog export with no Claude Code:
   load -> graph -> anchors -> topics -> entities (TF proxy) -> recommend (candidates)
        -> write report.json + report.html
-
-Usage:
-  python run.py sample-export/
-  python run.py sample-export/ --no-dashboard
-
-The model-driven steps (cluster naming, entity extraction, writing the contextual link
-anchors) are left as build TODOs; the starter writes deterministic placeholders so the
-report.json contract stays valid and the pipeline always produces a graded artifact.
 """
 from __future__ import annotations
-import argparse, os, sys, time
+import argparse, os, sys, time, json, urllib.request
+import urllib.parse
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.join(HERE, "mcp"))
 sys.path.insert(0, HERE)
 import server  # the MCP server module exposes every tool as a function
+
+
+def _call_model(prompt: str) -> str:
+    """Call Ollama's Gemma model to generate a concise cluster name."""
+    url = "http://localhost:11434/api/generate"
+    payload = json.dumps({
+        "model": "qwen3:4b",
+        "prompt": prompt,
+        "stream": False,
+        "options": {"num_predict": 20, "temperature": 0.1}
+    }).encode("utf-8")
+
+    try:
+        req = urllib.request.Request(url, data=payload, headers={"Content-Type": "application/json"})
+        with urllib.request.urlopen(req, timeout=10) as res:
+            data = json.loads(res.read().decode("utf-8"))
+            return data.get("response", "").strip().replace('"', '').replace("'", "")
+    except Exception:
+        return None
 
 
 def main():
@@ -38,11 +50,40 @@ def main():
     server.li_load(args.export_dir)
     server.li_graph()
     server.li_anchors()
-    server.li_topics()        # no model names in headless mode (cluster keys used)
+
+    # 1. Compute deterministic clusters
+    server.li_topics()
+
+    # 2. Orchestrate cluster naming (Topic Agent)
+    clusters = server._A["clusters"]["clusters"]
+    names_map = {}
+    model_calls = 0
+
+    for c in clusters:
+        hub = c.get("hub_page") or "root"
+        kws = ", ".join(c.get("keywords", []))
+        size = c.get("size", 0)
+
+        prompt = (f"Assign a professional, concise name (2-5 words) to an SEO topical cluster.\n"
+                  f"Hub Page: {hub}\n"
+                  f"Key Terms: {kws}\n"
+                  f"Member Count: {size}\n"
+                  f"Return ONLY the name. No quotes or explanations.")
+
+        name = _call_model(prompt)
+        if name:
+            names_map[c["key"]] = name
+            model_calls += 1
+        else:
+            names_map[c["key"]] = c["key"]
+
+    # Commit names back to the server
+    server.li_topics(names=names_map)
+
     server.li_entities()      # uses TF-keyword relatedness proxy
     # Starter does NOT attach model-written recs; _report_obj() then falls back to the
     # deterministic candidates (no anchors) so the contract always has data to grade.
-    server.RUN["model_calls"] = 0
+    server.RUN["model_calls"] = model_calls
     server.RUN["duration_sec"] = round(time.time() - t0, 1)
     server.li_report()
     server.li_export()

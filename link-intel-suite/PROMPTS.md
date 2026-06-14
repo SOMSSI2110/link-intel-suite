@@ -75,3 +75,23 @@ Improving contextual internal-link recommendations to align with rulebook sectio
 
 Revised?
 Pending evaluation of additive versus multiplicative scoring.
+7. Prompt:
+Search the codebase for any assignment that writes a non-null value into cluster["name"].
+Report:
+1. File
+2. Function
+3. Exact code
+
+For:
+Verifying whether topic-agent cluster naming had already been implemented.
+
+Revised?
+No. Used to validate current project status before adding new functionality.
+8. Prompt:
+Inspect server.py and verify whether li_topics(names=...) updates cluster names and flows into report.json.
+
+For:
+Understanding topic-agent integration before cluster naming work.
+
+Revised?
+No.

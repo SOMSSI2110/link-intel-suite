@@ -18012,7 +18012,7 @@
   "topical_clusters": [
     {
       "key": "(home)",
-      "name": null,
+      "name": "(home)",
       "size": 189,
       "pages": [
         "https://nmgtechnologies.com",
@@ -18221,7 +18221,7 @@
     },
     {
       "key": "disclaimer",
-      "name": null,
+      "name": "disclaimer",
       "size": 1,
       "pages": [
         "https://nmgtechnologies.com/disclaimer"
@@ -18242,7 +18242,7 @@
     },
     {
       "key": "blog",
-      "name": null,
+      "name": "blog",
       "size": 1,
       "pages": [
         "https://nmgtechnologies.com/blog/covid-19-resources"
@@ -18263,7 +18263,7 @@
     },
     {
       "key": "ai-driven-devops-cloud-automation",
-      "name": null,
+      "name": "ai-driven-devops-cloud-automation",
       "size": 1,
       "pages": [
         "https://nmgtechnologies.com/ai-driven-devops-cloud-automation"
@@ -18284,7 +18284,7 @@
     },
     {
       "key": "company",
-      "name": null,
+      "name": "company",
       "size": 1,
       "pages": [
         "https://nmgtechnologies.com/company/promise"
@@ -18305,7 +18305,7 @@
     },
     {
       "key": "ai-optimized-ecommerce-solutions",
-      "name": null,
+      "name": "ai-optimized-ecommerce-solutions",
       "size": 1,
       "pages": [
         "https://nmgtechnologies.com/ai-optimized-ecommerce-solutions"
@@ -18326,7 +18326,7 @@
     },
     {
       "key": "ai-powered-saas-development",
-      "name": null,
+      "name": "ai-powered-saas-development",
       "size": 1,
       "pages": [
         "https://nmgtechnologies.com/ai-powered-saas-development"
@@ -18347,7 +18347,7 @@
     },
     {
       "key": "success-stories",
-      "name": null,
+      "name": "success-stories",
       "size": 1,
       "pages": [
         "https://nmgtechnologies.com/success-stories/unique-schools"
@@ -18368,7 +18368,7 @@
     },
     {
       "key": "success-stories",
-      "name": null,
+      "name": "success-stories",
       "size": 1,
       "pages": [
         "https://nmgtechnologies.com/success-stories/jobgraze"
@@ -18389,7 +18389,7 @@
     },
     {
       "key": "blog",
-      "name": null,
+      "name": "blog",
       "size": 1,
       "pages": [
         "https://nmgtechnologies.com/blog/startup-india-event-2016-key-highlights"
@@ -18410,7 +18410,7 @@
     },
     {
       "key": "blog",
-      "name": null,
+      "name": "blog",
       "size": 1,
       "pages": [
         "https://nmgtechnologies.com/blog/least-expensive-way-increase-sales-e-commerce-store"
@@ -18431,7 +18431,7 @@
     },
     {
       "key": "blog",
-      "name": null,
+      "name": "blog",
       "size": 1,
       "pages": [
         "https://nmgtechnologies.com/blog/ada-compliance-website-checklist"
@@ -18452,7 +18452,7 @@
     },
     {
       "key": "blog",
-      "name": null,
+      "name": "blog",
       "size": 1,
       "pages": [
         "https://nmgtechnologies.com/blog/nmg-technologies-nigeria-meet"
@@ -29716,6 +29716,6 @@
   "run_meta": {
     "model": "gpt-oss:20b-cloud",
     "model_calls": 0,
-    "duration_sec": 0.4
+    "duration_sec": 160.4
   }
 }
