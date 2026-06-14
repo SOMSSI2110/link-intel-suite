@@ -25,3 +25,4 @@ Format:
 
 ## My log
 - `[--:--]` ...
+- `[12:55]` Initialized Git repository and connected GitHub remote -> created public repository and pushed starter bundle before development to preserve build history.
