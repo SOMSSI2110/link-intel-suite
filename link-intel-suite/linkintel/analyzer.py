@@ -452,6 +452,15 @@ def link_candidates(graph, relate: dict, pages, clusters=None, max_per_page=5) -
             if rel < 0.1: # Relevance Floor
                 continue
 
+            # Determine suggested anchor (Deterministic Fallback)
+            target_page = pages_by_url.get(v, {})
+            anchor = (target_page.get("Title 1") or target_page.get("H1-1") or "").strip()
+
+            if not anchor:
+                shared = e.get("shared", [])
+                topic = shared[0] if shared else "professional"
+                anchor = f"{topic} services"
+
             # Strategic Multiplier
             v_inlinks = inl.get(v, 0)
             if v_inlinks == 0:
@@ -468,7 +477,7 @@ def link_candidates(graph, relate: dict, pages, clusters=None, max_per_page=5) -
                 "target": v,
                 "relatedness": rel,
                 "shared_topics": e["shared"],
-                "suggested_anchor": None,
+                "suggested_anchor": anchor,
                 "score": score,
                 "reason": reason
             })
