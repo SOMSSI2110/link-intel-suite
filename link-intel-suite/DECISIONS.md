@@ -26,3 +26,7 @@ Format:
 ## My log
 - `[--:--]` ...
 - `[12:55]` Initialized Git repository and connected GitHub remote -> created public repository and pushed starter bundle before development to preserve build history.
+-`[13:45]` Reviewed cluster_pages() before modification -> identified URL-path clustering as the primary weakness because topic keywords are computed but not used to determine cluster membership.
+-`[13:55]` Rejected simple home-page reassignment approach -> improves only the "(home)" cluster and does not fully satisfy the rulebook requirement that clustering be based on titles, headings, and body text.
+-`[14:05]` Evaluated keyword-seed clustering proposal -> stronger than URL-path clustering because it uses content-derived keywords and is robust to flat URL structures. Deferred implementation pending review of cluster stability and false-positive risks.
+-`[14:15]` Selected graph-based connected-component clustering over URL-path and seed-based approaches -> deterministic, content-driven, order-invariant, and more robust to hidden exports with flat URL structures.

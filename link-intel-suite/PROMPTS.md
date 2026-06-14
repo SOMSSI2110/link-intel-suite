@@ -35,4 +35,19 @@ Understanding project architecture before implementation.
 
 **Revised?**
 No.
-2. ...
+2. Prompt:
+Review only cluster_pages() against rulebook section C. List exactly 3 weaknesses and do not modify code.
+
+For:
+Identifying highest-impact scoring weaknesses in topical clustering.
+
+Revised?
+No.
+3. Prompt:
+Design a deterministic clustering algorithm that uses page keywords as the primary clustering signal instead of URL path segments. Explain only, do not modify code.
+
+For:
+Finding a rulebook-compliant clustering strategy before implementation.
+
+Revised?
+Pending comparison against current URL-path approach.
