@@ -27,5 +27,12 @@ Format per entry:
 ---
 
 ## My prompts
-1. ...
+1. **Prompt:**
+"Explain the Internal Linking Intelligence architecture, starter bundle structure, report schema and scoring priorities."
+
+**For:**
+Understanding project architecture before implementation.
+
+**Revised?**
+No.
 2. ...
