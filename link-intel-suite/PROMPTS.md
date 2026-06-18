@@ -95,3 +95,9 @@ Understanding topic-agent integration before cluster naming work.
 
 Revised?
 No.
+9. Prompt:
+Design the smallest possible implementation of suggested_anchor generation using only target page information already available in the export.
+
+For: Replacing null suggested_anchor values.
+
+Revised? Yes. Chose deterministic anchor generation over model-based generation due to time and reliability constraints.

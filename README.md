@@ -28,3 +28,15 @@ You may use Ollama free **cloud** models (e.g. `gpt-oss:20b-cloud`, `gemma3:27b-
 audit log is NOT mandatory. Process is judged from git history + the manually-kept
 `PROMPTS.md` / `DECISIONS.md`, and the result from the working plugin + reproducible
 `report.json`. See `link-intel-suite/README.md` for the full note.
+
+<a href="https://labs.nmgdigital.com/">
+  <img src="https://labs.nmgdigital.com/assets/logos/forge-hex.svg"
+       title="Forge-NMG-Labs-Hackathon"
+       alt="Forge-NMG-Labs-Hackathon"
+       width="200"
+       height="200"/>
+</a>
+
+<p style="font-size: 11px; color: #777777; margin-top: 5px; font-family: sans-serif;">
+  Presented by <a href="https://nmgdigital.com/" style="color: #777777; text-decoration: underline;">NMG Digital</a>
+</p>

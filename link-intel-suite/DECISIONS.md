@@ -38,3 +38,4 @@ Format:
 -`[15:39] Implemented topic-agent cluster naming workflow. Verified names flow through li_topics(names=...) into report.json. Current environment fell back to cluster keys because model endpoint did not return names.
 -`[15:51]` Implemented topic-agent cluster naming workflow through run.py and li_topics(names=...). Verified model-generated names populate report.json with fallback to cluster keys when generation fails.
 -`[15:55] Implemented cluster naming orchestration path with fallback behavior. Naming currently falls back to cluster keys under current execution environment and requires further debugging.
+-`[16:05]` Implemented deterministic suggested anchors using target page Title 1, H1-1, and shared-topic fallbacks -> removed null suggested_anchor values from recommendations.
